@@ -58,7 +58,7 @@ export default function App() {
     <div className="min-h-screen bg-[#f5f5f7]">
       <div className="fixed top-0 left-0 right-0 z-50">
         {/* Header guindo */}
-        <AdminHeader sidebarCollapsed={sidebarCollapsed} />
+        <AdminHeader />
         {/* Franja amarilla */}
         <div className="h-1 bg-gradient-to-r from-[#C9A961] to-[#E4C989]" />
       </div>
