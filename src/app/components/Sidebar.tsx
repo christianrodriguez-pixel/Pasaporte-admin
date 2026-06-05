@@ -20,6 +20,7 @@ import {
   Gift
 } from 'lucide-react';
 import { useState } from 'react';
+import injuveLogo from '../../imports/injuve-tamaulipas.png';
 
 interface SidebarProps {
   collapsed: boolean;
@@ -77,21 +78,21 @@ export function Sidebar({ collapsed, onToggle, activeModule, onModuleChange }: S
         `}
       >
       {/* Header del sidebar con botón de colapsar */}
-      <div className="p-4 border-b border-gray-200">
+      <div className="h-[95px] p-4 border-b border-gray-200">
         {!collapsed ? (
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-[#922735] font-bold text-sm">INJUVE</h2>
-              <button
-                onClick={onToggle}
-                className="p-1 hover:bg-gray-100 rounded transition-colors"
-              >
-                <ChevronLeft className="w-4 h-4 text-gray-600" />
-              </button>
+          <div className="h-full flex items-center justify-between gap-3">
+            <div className="flex-1 flex flex-col items-start justify-center">
+              <img src={injuveLogo} alt="INJUVE Tamaulipas" className="h-[22px] w-auto object-contain" />
+              <p className="mt-2 text-gray-500 text-[11px] leading-tight">
+                Sistema Administrativo<br />Pasaporte Joven
+              </p>
             </div>
-            <p className="text-gray-600 text-xs leading-tight">
-              Sistema Administrativo<br />Pasaporte Joven
-            </p>
+            <button
+              onClick={onToggle}
+              className="p-1 hover:bg-gray-100 rounded transition-colors"
+            >
+              <ChevronLeft className="w-4 h-4 text-gray-600" />
+            </button>
           </div>
         ) : (
           <div className="flex justify-center">
